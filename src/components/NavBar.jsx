@@ -12,16 +12,16 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse d-flex-md justify-content-around" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item sm-mx-2 mx-5">
-                            <a className="nav-link active" aria-current="page" href="#">Productos</a>
+                            <a className="nav-link" aria-current="page" href="#">Productos</a>
                         </li>
                         <li className="nav-item sm-mx-2 mx-5">
-                            <a className="nav-link active" href="#"><i className="fa-solid fa-cart-shopping"></i></a>
+                            <a className="nav-link" href="#"><i className="fa-solid fa-cart-shopping"></i></a>
                         </li>
                         <li className="nav-item sm-mx-2 mx-5">
-                            <a className="nav-link active" href="#">Nosotros</a>
+                            <a className="nav-link" href="#">Nosotros</a>
                         </li>
                         <li className="nav-item sm-mx-2 mx-5">
-                            <a className="nav-link active">Contacto</a>
+                            <a className="nav-link" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
