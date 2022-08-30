@@ -1,0 +1,43 @@
+.productos__container{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.productos {
+    background-color: #fff;
+    width: 250px;
+    height: 300px;
+    padding: 5px;
+    margin: 15px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+.productos img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.productos h5,.productos span{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000A23;
+    display: block;
+}
+.productos button {
+    background-color: #ff6d00;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    transition-duration: .2s;
+}
+.productos button:hover {
+    background-color: #ffd181;
+    color: #ff6d00;
+}
