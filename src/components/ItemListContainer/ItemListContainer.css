@@ -5,8 +5,8 @@
 
 .productos {
     background-color: #fff;
-    width: 250px;
-    height: 300px;
+    width: 275px;
+    height: 350px;
     padding: 5px;
     margin: 15px 25px;
     text-align: center;
@@ -15,29 +15,33 @@
 
 .productos img {
     width: 100%;
-    height: 50%;
+    height: 40%;
     object-fit: contain;
 }
 
-.productos h5,.productos span{
+.productos h5,.productos .productos__precio{
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #000A23;
-    display: block;
 }
-.productos button {
+.productos .productos__button {
     background-color: #ff6d00;
     border: none;
     padding: 5px 20px;
     border-radius: 4px;
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     color: #fff;
     transition-duration: .2s;
 }
-.productos button:hover {
+.productos .productos__button:hover {
     background-color: #ffd181;
-    color: #ff6d00;
+}
+
+.productos__stock {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px;
 }
