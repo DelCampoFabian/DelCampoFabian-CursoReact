@@ -19,8 +19,8 @@ const ItemListContainer = (props) => {
                                     <span className="productos__precio">Precio: ${elemento.precio}</span>
                                     <span className="productos__stock">Stock: {(elemento.stock !== 0) ? [elemento.stock] : "Sin stock"}</span>
                                 </div>
-                                <ItemCount productos={elemento.stock}/>
-                                <button className="productos__button">Añadir al carrito</button>
+                                <ItemCount stock={elemento.stock}/>
+                                
                             </div>
                 })
             }

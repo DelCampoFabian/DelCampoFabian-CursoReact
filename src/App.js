@@ -12,8 +12,7 @@ import ProductoSeis from "./assets/img/productoSeis.jpeg";
 
 
 function App() {
-
-   
+//props a pasar al ItemListContainer
   const listaProductos= [
     {id : 1,nombre: "Conservadora",precio: 3000,imagen: ProductoUno, stock:8},
     {id : 2,nombre: "Termo",precio: 3500,imagen: ProductoDos, stock:5},
