@@ -1,30 +1,44 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
+import { useEffect } from "react";
+import { useState } from "react";
 import "./ItemListContainer.css";
+import ProductoUno from "../../assets/img/ProductoUno.png";
+import ProductoDos from "../../assets/img/productoDos.jpeg";
+import ProductoTres from "../../assets/img/productoTres.jpeg";
+import ProductoCuatro from "../../assets/img/productoCuatro.png";
+import ProductoCinco from "../../assets/img/productoCinco.jpeg";
+import ProductoSeis from "../../assets/img/productoSeis.jpeg";
 
 
 
-const ItemListContainer = (props) => {
-    const {
-        productos
-    } = props
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        const listaProductos = [
+            { id: 1, nombre: "Conservadora", precio: 3000, imagen: ProductoUno, stock: 8 },
+            { id: 2, nombre: "Termo", precio: 3500, imagen: ProductoDos, stock: 5 },
+            { id: 3, nombre: "Equipo de mate", precio: 8500, imagen: ProductoTres, stock: 0 },
+            { id: 4, nombre: "Caña de pescar", precio: 12550, imagen: ProductoCuatro, stock: 0 },
+            { id: 5, nombre: "Conservadora", precio: 6300, imagen: ProductoCinco, stock: 12 },
+            { id: 6, nombre: "Carpa", precio: 21500, imagen: ProductoSeis, stock: 10 },
+        ]
+
+        const promesa = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(listaProductos);
+            }, 2000);
+        });
+
+        promesa.then((respuesta) => {
+            setItems(respuesta);
+        });
+    }, []);
+    
+
     return (
-        <div className="productos__container">
-            {
-                productos.map((elemento) => {
-                    return  <div className="productos" id={elemento.id} key={elemento.id}>
-                                <img src={elemento.imagen} alt="" />
-                                <h5>{elemento.nombre}</h5>
-                                <div>
-                                    <span className="productos__precio">Precio: ${elemento.precio}</span>
-                                    <span className="productos__stock">Stock: {(elemento.stock !== 0) ? [elemento.stock] : "Sin stock"}</span>
-                                </div>
-                                <ItemCount stock={elemento.stock}/>
-                                
-                            </div>
-                })
-            }
-            
+        <div>
+          <ItemList items={items} />
         </div>
     )
 }

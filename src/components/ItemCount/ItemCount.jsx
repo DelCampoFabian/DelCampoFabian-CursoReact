@@ -12,7 +12,6 @@ const ItemCount = (props) => {
                 setProductosAgregados(0)
             }, 1000);
             return "Cantidad no disponible"
-           
         }else return "Agregaste: " + productosAgregados;
     }
 
@@ -29,8 +28,7 @@ const ItemCount = (props) => {
                 }
             }}>Añadir al carrito</button>
             <p className="p-2"> {cartelProductos()}</p>
-        </div>
-        
+        </div>  
     )
 }
 
