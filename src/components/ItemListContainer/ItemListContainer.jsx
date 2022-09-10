@@ -29,13 +29,10 @@ const ItemListContainer = () => {
                 resolve(listaProductos);
             }, 2000);
         });
-
         promesa.then((respuesta) => {
             setItems(respuesta);
         });
     }, []);
-    
-
     return (
         <div>
           <ItemList items={items} />

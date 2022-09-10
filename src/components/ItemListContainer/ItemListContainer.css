@@ -24,7 +24,7 @@
     font-weight: 600;
     color: #000A23;
 }
-.productos .productos__button {
+ .productos .productos__button {
     background-color: #ff6d00;
     border: none;
     padding: 5px 20px;
@@ -38,6 +38,7 @@
 .productos .productos__button:hover {
     background-color: #ffd181;
 }
+
 
 .productos__stock {
     font-size: 15px;

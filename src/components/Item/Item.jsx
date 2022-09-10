@@ -3,7 +3,6 @@ import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ nombre, imagen, precio, stock }) => {
     return (
-
         <div className="productos__container">
             <div className="productos">
                 <img src={imagen} alt={nombre} />
@@ -15,11 +14,7 @@ const Item = ({ nombre, imagen, precio, stock }) => {
                 </div>
             </div>
         </div>
-
     )
-
-
-
 }
 
 

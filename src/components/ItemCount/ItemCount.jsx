@@ -10,6 +10,7 @@ const ItemCount = (props) => {
         if (productosAgregados > stock) {
             setTimeout(() => {
                 setProductosAgregados(0)
+                setContador(0)
             }, 1000);
             return "Cantidad no disponible"
         }else return "Agregaste: " + productosAgregados;
