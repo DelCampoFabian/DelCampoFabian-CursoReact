@@ -1,16 +1,16 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
-const Item = ({ nombre, imagen, precio, stock }) => {
+const Item = (props) => {
     return (
         <div className="productos__container">
             <div className="productos">
-                <img src={imagen} alt={nombre} />
-                <h5 className=""><b>{nombre}</b></h5>
+                <img src={props.imagen} alt={props.nombre} />
+                <h5 ><b>{props.nombre}</b></h5>
                 <div>
-                    <span className="productos__precio">Precio: ${precio}</span>
-                    <span className="productos__stock">Stock: {(stock !== 0) ? [stock] : "Sin stock"}</span>
-                    <ItemCount stock={stock} />
+                    <p className="productos__precio">Precio: ${props.precio}</p>
+                    <p className="productos__stock">Stock disponible: {(props.stock !== 0) ? [props.stock] : "Sin stock"}</p>
+                    <Link to={`/detalle/${props.id}`} className="ver__mas" >Ver detalles</Link>
                 </div>
             </div>
         </div>

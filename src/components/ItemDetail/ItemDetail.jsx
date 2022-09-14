@@ -2,6 +2,7 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
+
 const ItemDetail = ({detalle}) => {
     return (
         <div className="row justify-content-around align-items-center my-5 detail__container">
@@ -12,7 +13,7 @@ const ItemDetail = ({detalle}) => {
                 <h4>{detalle.nombre}</h4>
                 <p className="detail-info__p">{detalle.descripcion}</p>
                 <span className="detail-info__span">Precio: ${detalle.precio}</span>
-                <span className="detail-info__span">Stock: {detalle.stock}</span>
+                <span className="detail-info__span">Stock disponible: {detalle.stock}</span>
                 <ItemCount stock={detalle.stock}/>
             </div>  
         </div>

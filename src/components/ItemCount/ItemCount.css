@@ -1,37 +1,55 @@
 .contador__numero {
-    padding: 4px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: #000;
-    background-color: #ffd181;
+    background-color: #fff;
     border-radius: 5px;
-    border: 2px solid #000;
+    
 }
 .contador {
-    margin-left: 5px;
-    margin-right: 5px;
     font-size: 20px;
     font-weight: 500;
-    color: #000;
-    background-color: #ff6d00;
-    border-radius: 5px;
+    color: #ff6d00;
+    background-color: #fff;
     border: none;
+    padding: 0 5px;
 }
 .contador:hover {
-    background-color: #ffd181;
+    color: #000;
 }
 .productos__button {
     background-color: #ff6d00;
-    border: 1px solid #ff6d00 ;
     padding: 5px 20px;
+    border: none;
     border-radius: 4px;
     margin-top: 10px;
     font-size: 14px;
     font-weight: 500;
     color: #fff;
-    transition-duration: .2s;
 }
 .productos__button:hover {
-    background-color: #ffd181;
+    background-color: #ff4b00;
+}
+.productos__agregados{
+font-weight: 600;
+}
+
+.ver__mas{
     color: #000;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ver__mas:hover {
+    color: #ff6d00;
+}
+.cantidad__productos{
+    display: flex;
+    align-items: center;
+}
+.cantidad__productos, .cantidad__productos-titulo{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
 }
