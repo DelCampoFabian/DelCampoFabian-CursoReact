@@ -3,22 +3,8 @@ import { useState } from "react";
 import "./ItemCount.css"
 
 
-const ItemCount = (props) => {
+const ItemCount = ({stock, carrito}) => {
     const [contador, setContador] = useState(0);
-
-    const {stock} = props;
-
-    const [productosAgregados, setProductosAgregados] = useState(0);
-
-    const cartelProductos = () => {
-        if (productosAgregados > stock) {
-            setTimeout(() => {
-                setProductosAgregados(0)
-                setContador(0)
-            }, 1000);
-            return "Cantidad no disponible"
-        }else return "Agregaste: " + productosAgregados;
-    }
     function Decrementar(){
         (contador !== 0) ? setContador(contador-1): setContador(contador) 
     }
@@ -36,12 +22,13 @@ const ItemCount = (props) => {
             </div>
             
             <button className="productos__button" onClick={() => {
-                if (productosAgregados <= stock){
-                    setProductosAgregados(productosAgregados + contador); 
+                if (contador <= stock){
+                    setContador(contador); 
+                    console.log("Añadiste: " + contador + " unidades" )
                     }
+                carrito()    
                 }}>Añadir al carrito
             </button>
-            <span className="p-2 productos__agregados"> {cartelProductos()}</span>
         </div>  
     )
 }

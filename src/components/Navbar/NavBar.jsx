@@ -20,7 +20,7 @@ const NavBar = () => {
                             <NavLink aria-current="page" to="/productos" className="nav__enlaces">Productos</NavLink>
                         </li>
                         <li className="nav-item sm-mx-2 mx-5">
-                            <NavLink to="/" className="nav__enlaces"><CartWidget/></NavLink>
+                            <NavLink to="/carrito" className="nav__enlaces"><CartWidget/></NavLink>
                         </li>
                         <li className="nav-item sm-mx-2 mx-5">
                             <NavLink  to="/categoria/Conservadoras" className="nav__enlaces">Conservadoras</NavLink>
