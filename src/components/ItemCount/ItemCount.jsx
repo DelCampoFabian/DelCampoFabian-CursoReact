@@ -24,9 +24,8 @@ const ItemCount = ({stock, carrito}) => {
             <button className="productos__button" onClick={() => {
                 if (contador <= stock){
                     setContador(contador); 
-                    console.log("Añadiste: " + contador + " unidades" )
                     }
-                carrito()    
+                carrito(contador)    
                 }}>Añadir al carrito
             </button>
         </div>  

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useCartContext } from "../CartContext/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom"
@@ -7,9 +8,14 @@ import { Link } from "react-router-dom"
 
 const ItemDetail = ({detalle}) => {
     const [carrito, setCarrito] = useState(false)
-    const irCarrito = () =>{
+    const {agregarProducto} = useCartContext()
+    
+    const irCarrito = (contador) =>{
         setCarrito(true)
+        agregarProducto(detalle, contador)
     }
+    
+   
     return (
         <div className="row justify-content-around align-items-center my-5 detail__container">
             <div className="col-md-4 detail__img">
@@ -22,7 +28,6 @@ const ItemDetail = ({detalle}) => {
                 <span className="detail__info-span">Stock disponible: {detalle.stock}</span>
                 {
                     carrito ? 
-                    
                     <Link to="/carrito" className="detail__comprar">Comprar</Link> : <ItemCount stock={detalle.stock} carrito={irCarrito}/>
                 }
                 
